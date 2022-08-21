@@ -1,5 +1,15 @@
 package com.bridgelabz.addressbook.services;
 
-public interface IAddressBookServices {
+import com.bridgelabz.addressbook.dto.AddressBookDTO;
+import com.bridgelabz.addressbook.model.AddressBookModel;
+import org.springframework.web.bind.annotation.RequestBody;
 
+import java.util.List;
+
+public interface IAddressBookServices {
+	List<AddressBookModel> seeAddressBook();
+    AddressBookModel addingAddress(AddressBookDTO addressBookDTO);
+    AddressBookModel updateAddress(int id ,AddressBookDTO addressBookDTO );
+    AddressBookModel getAddress(int id);
+    List<AddressBookModel>  deleteAddress(long phoneNumber);
 }
